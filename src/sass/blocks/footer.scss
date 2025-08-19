@@ -1,0 +1,209 @@
+@use "/src/sass/base/variables.scss" as*;
+
+.footer {
+    margin-top: 60px;
+    padding: 50px 0px 50px 10px;
+    background-color: $dark;
+
+    &__header {
+        color: $light;
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__descr {
+        margin-top: 40px;
+        color: $light;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    a {
+        color: $light;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__label {
+        color: $ui-active;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__input-block {
+        margin-top: 40px;
+    }
+
+    &__input {
+        display: block;
+        width: 293px;
+        padding-bottom: 15px;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-bottom: 1px solid $ui-active;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $ui-active;
+
+        &::placeholder {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            color: $ui-active;
+        }
+    }
+
+    &__fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+
+        &_line {
+            width: 293px;
+            height: 1px;
+            background: $ui-active;
+        }
+    }
+
+    &__check-block {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+
+        a {
+            color: #A22DC6;
+            text-decoration: none;
+            margin-left: 2px;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+        border-radius: 2px;
+        border: 1px solid $light;
+        margin-right: 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+        background-color: transparent;
+
+        &:checked {
+            background-color: $light;
+            border: 1px solid $dark;
+
+            &::after {
+                content: '✔';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: $dark;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+    }
+
+    &__wrapper_links {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 66px;
+    }
+
+    &__links-block {
+        margin-top: 40px;
+    }
+
+    &__nav {
+        margin-top: 40px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-top: 20px;
+        }
+    }
+
+    &__wrapper_social {
+        margin-top: 40px;
+    }
+
+    &__social-block {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 40px;
+        padding: 0;
+        list-style: none;
+
+        .icon-facebook::before,
+        .icon-instagram::before,
+        .icon-pinterest-circled::before {
+            margin: 0;
+        }
+
+        span {
+            font-size: 20px;
+        }
+    }
+
+    &__copyright {
+        margin-top: 20px;
+        color: $light;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 50px 24px 50px 27px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        padding: 50px 30px;
+
+        &__wrapper_social,
+        &__links-block {
+            margin-top: 0;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1920px) {
+    .footer {
+        margin-top: 100px;
+        padding: 80px 240px 52px 240px;
+
+        &__copyright {
+            margin-top: 18px;
+        }
+    }
+}
