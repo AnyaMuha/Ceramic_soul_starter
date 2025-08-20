@@ -40,4 +40,113 @@
 
         }
     }
+
+    &__content-item {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+
+    }
+
+    &__item-price {
+        margin-top: 7.7px;
+    }
+
+    &__img {
+        width: 340px;
+        height: 198px;
+        object-fit: cover;
+    }
+
+    .content-item-wrapper {
+        background-color: $light;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+        width: 340px;
+    }
+
+    .catalog_txt {
+        padding: 12px 12px 16.5px 12px;
+        border: 1px solid $dark;
+        border-top: none;
+        color: #000;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog {
+        &__content-item {
+            position: relative;
+            padding: 0 10px;
+
+            &-frame {
+                span {
+                    position: relative;
+                    display: block;
+                    width: 200px;
+                    height: 0.5px;
+                    background-color: $dark;
+                }
+            }
+        }
+
+        &__tabs {
+            width: 460px;
+            padding: 13px 25px;
+        }
+
+        &__line-left {
+            top: 50px;
+            left: -100px;
+            transform: rotate(90deg);
+        }
+
+        &__line-top {
+            top: 151px;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .catalog {
+        &__content-item {
+            margin-top: 85px;
+            position: relative;
+            padding: 0 25px;
+            gap: 35px;
+        }
+
+        &__line-left {
+            top: 161px;
+            left: -100px;
+            transform: rotate(90deg);
+        }
+
+        &__line-top {
+            top: 60px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .catalog {
+        &__content-item {
+            gap: 83px;
+        }
+
+        &__img {
+            width: 285px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .content-item-wrapper {
+            width: 285px;
+        }
+    }
 }
