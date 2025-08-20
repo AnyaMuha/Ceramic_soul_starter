@@ -46,8 +46,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-
-
     }
 
     &__item-price {
@@ -82,7 +80,27 @@
     .catalog {
         &__content-item {
             position: relative;
-            padding: 0 10px;
+            padding: 10px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 1px;
+                background-color: $dark;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 1px;
+                height: 200px;
+                background-color: $dark;
+            }
 
             &-frame {
                 span {
@@ -99,16 +117,6 @@
             width: 460px;
             padding: 13px 25px;
         }
-
-        &__line-left {
-            top: 151px;
-            left: -100px;
-            transform: rotate(90deg);
-        }
-
-        &__line-top {
-            top: 50px;
-        }
     }
 }
 
@@ -117,18 +125,8 @@
         &__content-item {
             margin-top: 85px;
             position: relative;
-            padding: 0 25px;
+            padding: 25px;
             gap: 35px;
-        }
-
-        &__line-left {
-            top: 161px;
-            left: -100px;
-            transform: rotate(90deg);
-        }
-
-        &__line-top {
-            top: 60px;
         }
     }
 }
