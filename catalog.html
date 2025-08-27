@@ -147,72 +147,93 @@
     </section>
 
     <footer class="footer">
-        <div class="footer__wrapper">
-            <div class="footer__wrapper_forma">
-                <h2 class="footer__header">newsletter</h2>
-                <div class="footer__descr">Keep up to date with news and promotions</div>
-                <form class="footer__forma" action="#">
-                    <fieldset class="footer__fieldset">
-                        <div class="footer__input-block">
-                            <label class="footer__label" for="name">Enter your e-mail
-                            </label>
-                            <input class="footer__input" type="text" id="name" name="name" required>
-                        </div>
-                        <div class="footer__fieldset_line"></div>
-                    </fieldset>
-                    <label class="footer__label footer__check-block" for="checkbox"><input required
-                            class="footer__checkbox" type="checkbox" id="checkbox">
-                        I agree with the <a href="#">terms</a>
-                    </label>
-                    <button class="btn-submit footer__btn">submit</button>
-                </form>
-            </div>
-            <div class="footer__wrapper_links">
-                <div class="footer__links-block">
-                    <h2 class="footer__header">discover</h2>
-                    <nav class="footer__nav">
-                        <ul>
-                            <li><a href="#" class="footer__link">About Us</a></li>
-                            <li><a href="#" class="footer__link">Blog</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="footer__links-block">
-                    <h2 class="footer__header">shopping</h2>
-                    <nav class="footer__nav">
-                        <ul>
-                            <li><a href="#" class="footer__link">Catalog</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="footer__links-block">
-                    <h2 class="footer__header">information</h2>
-                    <nav class="footer__nav">
-                        <ul>
-                            <li><a href="#" class="footer__link">Terms and Conditions</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="footer__wrapper_social">
-                <h2 class="footer__header">follow us</h2>
-                <ul class="footer__social-block">
-                    <li>
-                        <a href="#"><span class="icon-facebook footer__icon"></span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon-instagram footer__icon"></span></a>
-                    </li>
-                    <li>
-                        <a href="#"><span class="icon-pinterest-circled footer__icon"></span></a>
-                    </li>
-                </ul>
-            </div>
+      <div class="footer__wrapper">
+        <div class="footer__wrapper_forma">
+          <h2 class="footer__header">newsletter</h2>
+          <div class="footer__descr">
+            Keep up to date with news and promotions
+          </div>
+          <form class="footer__forma" action="#">
+            <fieldset class="footer__fieldset">
+              <div class="footer__input-block">
+                <label class="footer__label" for="footer-email"
+                  >Enter your e-mail
+                </label>
+                <input
+                  class="footer__input"
+                  type="text"
+                  id="footer-email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="footer__fieldset_line"></div>
+            </fieldset>
+            <label
+              class="footer__label footer__check-block"
+              for="footer-checkbox"
+              ><input
+                required
+                class="footer__checkbox"
+                type="checkbox"
+                id="footer-checkbox"
+              />
+              I agree with the <a href="#">terms</a>
+            </label>
+            <div class="checkbox-error-message"></div>
+            <button class="btn-submit footer__btn">submit</button>
+          </form>
         </div>
-        <div class="footer__copyright">© Copyright 2024, Ceramic soul</div>
+        <div class="footer__wrapper_links">
+          <div class="footer__links-block">
+            <h2 class="footer__header">discover</h2>
+            <nav class="footer__nav">
+              <ul>
+                <li><a href="#" class="footer__link">About Us</a></li>
+                <li><a href="#" class="footer__link">Blog</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__links-block">
+            <h2 class="footer__header">shopping</h2>
+            <nav class="footer__nav">
+              <ul>
+                <li><a href="#" class="footer__link">Catalog</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="footer__links-block">
+            <h2 class="footer__header">information</h2>
+            <nav class="footer__nav">
+              <ul>
+                <li>
+                  <a href="#" class="footer__link">Terms and Conditions</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer__wrapper_social">
+          <h2 class="footer__header">follow us</h2>
+          <ul class="footer__social-block">
+            <li>
+              <a href="#"><span class="icon-facebook footer__icon"></span></a>
+            </li>
+            <li>
+              <a href="#"><span class="icon-instagram footer__icon"></span></a>
+            </li>
+            <li>
+              <a href="#"
+                ><span class="icon-pinterest-circled footer__icon"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
     </footer>
 
     <script type="module" src="/src/js/script.js"></script>
