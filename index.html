@@ -243,18 +243,18 @@
           <form class="footer__forma" action="#">
             <fieldset class="footer__fieldset">
               <div class="footer__input-block">
-                <label class="footer__label" for="footer-email"
-                  >Enter your e-mail
-                </label>
+                <label class="footer__label" for="footer-email"></label>
                 <input
                   class="footer__input"
                   type="text"
                   id="footer-email"
                   name="email"
+                  placeholder="Enter your e-mail"
                   required
                 />
               </div>
-              <div class="footer__fieldset_line"></div>
+              <!-- <div class="footer__fieldset_line"></div> -->
+              <span class="error-message"></span>
             </fieldset>
             <label
               class="footer__label footer__check-block"
@@ -267,7 +267,7 @@
               />
               I agree with the <a href="#">terms</a>
             </label>
-            <div class="checkbox-error-message"></div>
+            <span class="checkbox-error-message"></span>
             <button class="btn-submit footer__btn">submit</button>
           </form>
         </div>

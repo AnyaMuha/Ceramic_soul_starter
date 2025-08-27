@@ -1,6 +1,10 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .footer {
+  .footer__input.just-validate-error-field {
+    border-bottom: 1px solid $ui-error; // красная линия
+    color: $ui-error; // красный текст
+  }
   .just-validate-error-field {
     border: none;
     outline: 1px solid $ui-error;
@@ -54,20 +58,55 @@
     background-color: transparent;
     box-shadow: none;
     border: none;
-    border-bottom: 1px solid $ui-active;
+    border-bottom: 1px solid $ui-active; // белая линия
     font-size: 14px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
-    color: $ui-active;
+    color: $ui-active; // белый текст
+    outline: none;
 
     &::placeholder {
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
       color: $ui-active;
     }
+
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid $ui-active; // белая линия при фокусе
+    }
+  }
+
+  // ошибка: красная линия, красный текст
+  .footer__input.just-validate-error-field {
+    border: none; /* убираем обводку */
+    outline: none;
+    border-bottom: 1px solid $ui-error;
+    color: $ui-error;
+    &::placeholder {
+      color: $ui-error;
+      opacity: 1;
+    }
+  }
+
+  // если пользователь печатает (фокус) → текст белый
+  .footer__input.just-validate-error-field:focus {
+    color: $ui-active;
+  }
+
+  // успех
+  .footer__input.just-validate-success-field {
+    border-bottom: 1px solid $ui-active;
+    color: $ui-active;
+  }
+
+  // текст ошибок под полями
+  .error-message,
+  .checkbox-error-message {
+    display: block;
+    margin-top: 6px; // <-- отступ от линии
+    font-size: 13px;
+    color: $ui-error;
   }
 
   &__fieldset {

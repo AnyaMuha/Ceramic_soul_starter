@@ -133,28 +133,26 @@ try {
   const footerValidator = new JustValidate(".footer__forma");
 
   footerValidator
-    .addField("#footer-email", [
-      {
-        rule: "required",
-        errorMessage: "Введите email",
-      },
-      {
-        rule: "email",
-        errorMessage: "Некорректный email",
-      },
-    ])
     .addField(
-      "#footer-checkbox",
+      "#footer-email",
       [
-        {
-          rule: "required",
-          errorMessage: "Подтвердите согласие",
-        },
+        { rule: "required", errorMessage: "Введите email" },
+        { rule: "email", errorMessage: "Некорректный email" },
       ],
       {
         errorsContainer: document
-          .querySelector("#footer-checkbox")
-          .parentElement.parentElement.querySelector(".checkbox-error-message"),
+          .querySelector("#footer-email")
+          .closest(".footer__fieldset")
+          .querySelector(".error-message"),
+      }
+    )
+    .addField(
+      "#footer-checkbox",
+      [{ rule: "required", errorMessage: "Подтвердите согласие" }],
+      {
+        errorsContainer:
+          document.querySelector("#footer-checkbox").parentElement
+            .nextElementSibling, // теперь сосед — .checkbox-error-message
       }
     );
 } catch (e) {
