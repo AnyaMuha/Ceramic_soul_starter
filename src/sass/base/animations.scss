@@ -1,0 +1,27 @@
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes Rotation {
+  0% {
+    transform: rotate(120deg);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(0deg) translateY(-5%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
