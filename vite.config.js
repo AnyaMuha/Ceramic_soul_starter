@@ -2,6 +2,8 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vite";
 import viteImagemin from "vite-plugin-imagemin";
+import { ViteEjsPlugin } from "vite-plugin-ejs";
+import FullReload from "vite-plugin-full-reload";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -44,5 +46,7 @@ export default defineConfig({
         ],
       },
     }),
+    ViteEjsPlugin(),
+    FullReload(["src/templates/**/*.html"]),
   ],
 });

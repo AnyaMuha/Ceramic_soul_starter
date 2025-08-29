@@ -1,62 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Website for Ceramic soul brand" />
-    <meta name="author" content="Awesome student" />
     <title>Blog</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap"
-      rel="stylesheet"
-    />
+    <%- include("src/templates/head.html") %>
   </head>
 
   <body>
     <section class="blog">
       <div class="container">
-        <div class="header">
-          <div class="header__menu header__menu_active">
-            <div class="header__menu-close">
-              <span></span>
-              <span></span>
-            </div>
-            <nav class="header__menu-nav">
-              <ul>
-                <li><a href="#" class="header__menu-link">catalog</a></li>
-                <li><a href="#" class="header__menu-link">blog</a></li>
-                <li><a href="#" class="header__menu-link">about</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="header__top">
-            <div class="burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <a href="#" class="header__logo"
-              ><img src="/src/logo/logo.png" alt="logo"
-            /></a>
-
-            <div class="header__icons">
-              <a href="#"><span class="icon-search"></span></a>
-              <a href="#"><span class="icon-shopping-bag"></span></a>
-            </div>
-          </div>
-          <nav class="header__nav">
-            <ul>
-              <li><a href="/catalog" class="header__link">catalog</a></li>
-              <li><a href="/blog" class="header__link">blog</a></li>
-              <li><a href="/about" class="header__link">about</a></li>
-            </ul>
-          </nav>
-          <h1 class="title-h2 blog__title">our digital notes</h1>
-        </div>
+        <%- include("src/templates/header.html") %>
+        <h1 class="title-h2 blog__title">our digital notes</h1>
 
         <div class="blog__wrapper">
           <div class="blog__card">
@@ -129,95 +82,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="footer__wrapper">
-        <div class="footer__wrapper_forma">
-          <h2 class="footer__header">newsletter</h2>
-          <div class="footer__descr">
-            Keep up to date with news and promotions
-          </div>
-          <form class="footer__forma" action="#">
-            <fieldset class="footer__fieldset">
-              <div class="footer__input-block">
-                <label class="footer__label" for="footer-email"></label>
-                <input
-                  class="footer__input"
-                  type="text"
-                  id="footer-email"
-                  name="email"
-                  placeholder="Enter your e-mail"
-                  required
-                />
-              </div>
-              <!-- <div class="footer__fieldset_line"></div> -->
-              <span class="error-message"></span>
-            </fieldset>
-            <label
-              class="footer__label footer__check-block"
-              for="footer-checkbox"
-              ><input
-                required
-                class="footer__checkbox"
-                type="checkbox"
-                id="footer-checkbox"
-              />
-              I agree with the <a href="#">terms</a>
-            </label>
-            <span class="checkbox-error-message"></span>
-            <button class="btn-submit footer__btn">submit</button>
-          </form>
-        </div>
-        <div class="footer__wrapper_links">
-          <div class="footer__links-block">
-            <h2 class="footer__header">discover</h2>
-            <nav class="footer__nav">
-              <ul>
-                <li><a href="/about" class="footer__link">About Us</a></li>
-                <li><a href="/blog" class="footer__link">Blog</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="footer__links-block">
-            <h2 class="footer__header">shopping</h2>
-            <nav class="footer__nav">
-              <ul>
-                <li><a href="/catalog" class="footer__link">Catalog</a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="footer__links-block">
-            <h2 class="footer__header">information</h2>
-            <nav class="footer__nav">
-              <ul>
-                <li>
-                  <a href="#" class="footer__link">Terms and Conditions</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-        <div class="footer__wrapper_social">
-          <h2 class="footer__header">follow us</h2>
-          <ul class="footer__social-block">
-            <li>
-              <a href="#"><span class="icon-facebook footer__icon"></span></a>
-            </li>
-            <li>
-              <a href="#"><span class="icon-instagram footer__icon"></span></a>
-            </li>
-            <li>
-              <a href="#"
-                ><span class="icon-pinterest-circled footer__icon"></span
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__copyright">© Copyright 2025, Ceramic soul</div>
-    </footer>
+    <%- include("src/templates/footer.html") %>
     <script type="module" src="/src/js/script.js"></script>
   </body>
 </html>
